@@ -8,14 +8,17 @@ on:
     branches:
       - main
       - '!feature/*'
-  pull_request: 
-    types:
-      - opened
-      - closed
-    paths-ignore:
-      - README.md
+
+  pull_request:
     branches:
       - main
+    paths-ignore:
+      - README.md
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - closed
 
 jobs:
   hello:
